@@ -35,4 +35,4 @@ func on_timer_timeout():
 	sword_instance.global_position += Vector2.RIGHT.rotated(randf_range(0, TAU))
 	
 	var enemy_direction = enemies[0].global_position - sword_instance.global_position
-	sword_instance.rotate = enemy_direction.angle()
+	sword_instance.rotation = enemy_direction.angle()
