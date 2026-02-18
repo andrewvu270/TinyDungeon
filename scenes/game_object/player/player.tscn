@@ -3,9 +3,24 @@
 [ext_resource type="Script" uid="uid://dnp1ptc374uvm" path="res://scenes/game_object/player/player.gd" id="1_dovo2"]
 [ext_resource type="Texture2D" uid="uid://bvmag7nu4d1ba" path="res://scenes/game_object/player/player2.png" id="2_dovo2"]
 [ext_resource type="PackedScene" uid="uid://qou6xxiqk5du" path="res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn" id="2_gmlin"]
+[ext_resource type="PackedScene" uid="uid://053d0l4smeu0" path="res://scenes/component/health_component.tscn" id="2_ss5pk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ss5pk"]
+bg_color = Color(0.24705882, 0.14901961, 0.19215687, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tj6oj"]
+bg_color = Color(0.2627451, 0.88235295, 0.7019608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.24705882, 0.14901961, 0.19215687, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s3670"]
 radius = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tj6oj"]
+radius = 7.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8afob"]
 radius = 5.0
@@ -15,22 +30,52 @@ collision_layer = 0
 motion_mode = 1
 script = ExtResource("1_dovo2")
 
+[node name="HealthComponent" parent="." unique_id=1801799382 instance=ExtResource("2_ss5pk")]
+
 [node name="AbilityManager" type="Node" parent="." unique_id=1461624029]
 
 [node name="SwordAbilityController" parent="AbilityManager" unique_id=898332632 instance=ExtResource("2_gmlin")]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1523121733]
+[node name="DamageIntervalTimer" type="Timer" parent="." unique_id=1743258961]
+wait_time = 0.5
+one_shot = true
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=571807526]
+custom_minimum_size = Vector2(32, 6)
+offset_left = -16.0
+offset_top = -24.0
+offset_right = 16.0
+offset_bottom = -18.0
+pivot_offset = Vector2(16, 3)
+theme_override_styles/background = SubResource("StyleBoxFlat_ss5pk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_tj6oj")
+max_value = 1.0
+value = 0.5
+show_percentage = false
+
+[node name="PickupAdrea2D" type="Area2D" parent="." unique_id=1523121733]
+visible = false
 position = Vector2(0, -5)
 collision_layer = 16
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1570589566]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupAdrea2D" unique_id=1570589566]
 shape = SubResource("CircleShape2D_s3670")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1342048882]
 texture = ExtResource("2_dovo2")
 offset = Vector2(0, -8)
 
+[node name="CollisionArea2D" type="Area2D" parent="." unique_id=434539306]
+visible = false
+position = Vector2(0, -7)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea2D" unique_id=552648502]
+shape = SubResource("CircleShape2D_tj6oj")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1010253047]
+visible = false
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_8afob")
