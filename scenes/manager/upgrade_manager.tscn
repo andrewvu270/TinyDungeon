@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://dmsfi8ui2okf1" path="res://scenes/manager/upgrade_manager.gd" id="1_pfuvr"]
 [ext_resource type="Script" uid="uid://du73svvc5o4bu" path="res://resources/upgrades/ability_upgrade.gd" id="2_5fq6c"]
 [ext_resource type="Resource" uid="uid://cooq4gco5lwu4" path="res://resources/upgrades/sword_rate.tres" id="3_odk14"]
+[ext_resource type="PackedScene" uid="uid://dvbx5mnql837a" path="res://scenes/ui/upgrade_screen.tscn" id="4_odk14"]
 
 [node name="UpgradeManager" type="Node" unique_id=1339709358]
 script = ExtResource("1_pfuvr")
 upgrade_pool = Array[ExtResource("2_5fq6c")]([ExtResource("3_odk14")])
+upgrade_screen_scene = ExtResource("4_odk14")
