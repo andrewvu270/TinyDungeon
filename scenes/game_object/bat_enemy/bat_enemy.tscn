@@ -8,7 +8,7 @@
 [ext_resource type="Shader" uid="uid://bdlyj8ak4nnth" path="res://scenes/component/hit_flash_component.gdshader" id="6_snwd1"]
 [ext_resource type="PackedScene" uid="uid://bfr1vtlsrf5io" path="res://scenes/component/death_component.tscn" id="7_7t1gg"]
 [ext_resource type="PackedScene" uid="uid://gwn2a37qg20t" path="res://scenes/component/random_stream_player_2d_component.tscn" id="8_dc8ri"]
-[ext_resource type="Texture2D" uid="uid://dsucfhyfhm2q6" path="res://scenes/game_object/bat_enemy/tile_0109.png" id="9_rfkwm"]
+[ext_resource type="Texture2D" uid="uid://bok1p7jvoghmr" path="res://scenes/game_object/bat_enemy/bat.png" id="9_rfkwm"]
 [ext_resource type="PackedScene" uid="uid://xekbbeidb2pu" path="res://scenes/component/hurtbox_component.tscn" id="10_v41hw"]
 
 [sub_resource type="Animation" id="Animation_7vmvs"]
