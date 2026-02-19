@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://1bsms4hc8aeu" path="res://scenes/component/death_component.tscn" id="4_bq7hi"]
 [ext_resource type="PackedScene" uid="uid://dyj6wdq0kn713" path="res://scenes/component/hurtbox_component.tscn" id="4_elloc"]
 [ext_resource type="PackedScene" uid="uid://hblvsbvkp55b" path="res://scenes/component/velocity_component.tscn" id="4_jkye5"]
+[ext_resource type="PackedScene" uid="uid://dni2jjuw3mu7" path="res://scenes/component/hit_flash_component.tscn" id="8_v58qd"]
 
 [sub_resource type="Animation" id="Animation_elloc"]
 length = 0.001
@@ -94,11 +95,16 @@ health_component = NodePath("../HealthComponent")
 
 [node name="VelocityComponent" parent="." unique_id=904987784 instance=ExtResource("4_jkye5")]
 
+[node name="HitFlashComponent" parent="." unique_id=43736468 node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("8_v58qd")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
+
 [node name="DeathComponent" parent="." unique_id=502505261 node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("4_bq7hi")]
 health_component = NodePath("../HealthComponent")
 sprite = NodePath("../Visuals/Sprite2D")
 
 [node name="HurtboxComponent" parent="." unique_id=1573192481 node_paths=PackedStringArray("health_component") instance=ExtResource("4_elloc")]
+visible = false
 health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent" unique_id=1912495979]
@@ -112,5 +118,6 @@ position = Vector2(0, -8)
 texture = ExtResource("1_fng3e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=262367554]
+visible = false
 position = Vector2(0, -7)
 shape = SubResource("CircleShape2D_gxg7h")
