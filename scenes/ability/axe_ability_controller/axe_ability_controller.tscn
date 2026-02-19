@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://dwlmn7d5crvoh"]
+[gd_scene load_steps=3 format=3 uid="uid://c15cshddgu2bd"]
 
-[ext_resource type="Script" uid="uid://d4nuik2iu65ni" path="res://scenes/ability/axe_ability_controller/axe_ability_controller.gd" id="1_s261h"]
-[ext_resource type="PackedScene" uid="uid://dx5yjmtb3awo4" path="res://scenes/ability/axe_ability/axe_ability.tscn" id="2_pxip5"]
+[ext_resource type="Script" path="res://scenes/ability/axe_ability_controller/axe_ability_controller.gd" id="1_ikc5g"]
+[ext_resource type="PackedScene" uid="uid://d4l1imlj6yakq" path="res://scenes/ability/axe_ability/axe_ability.tscn" id="2_qkr3e"]
 
-[node name="AxeAbilityController" type="Node" unique_id=964039078]
-script = ExtResource("1_s261h")
-axe_ability_scene = ExtResource("2_pxip5")
+[node name="AxeAbilityController" type="Node"]
+script = ExtResource("1_ikc5g")
+axe_ability_scene = ExtResource("2_qkr3e")
 
-[node name="Timer" type="Timer" parent="." unique_id=1414697060]
+[node name="Timer" type="Timer" parent="."]
 wait_time = 3.5
 autostart = true

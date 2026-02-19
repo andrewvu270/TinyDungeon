@@ -1,11 +1,10 @@
-[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://l17gstu6ucg3"]
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://bll2p2fy6bybf"]
 
-[ext_resource type="PackedScene" uid="uid://dwlmn7d5crvoh" path="res://scenes/ability/axe_ability_controller/axe_ability_controller.tscn" id="1_dcofh"]
-[ext_resource type="Script" uid="uid://xm2k8oukk42g" path="res://resources/upgrades/ability.gd" id="2_vls8u"]
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_3na14"]
 
 [resource]
-script = ExtResource("2_vls8u")
-ability_controller_scene = ExtResource("1_dcofh")
+script = ExtResource("1_3na14")
 id = "axe_damage"
+max_quantity = 0
 name = "Axe Damage"
-description = "Increase axe damage by 10%"
+description = "Increases axe damage by 10%."

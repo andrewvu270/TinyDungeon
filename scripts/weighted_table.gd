@@ -4,8 +4,8 @@ var items: Array[Dictionary] = []
 var weight_sum = 0
 
 
-func add_item(item, weight:int):
-	items.append({"item": item, "weight": weight})
+func add_item(item, weight: int):
+	items.append({ "item": item, "weight": weight })
 	weight_sum += weight
 
 
@@ -15,11 +15,13 @@ func remove_item(item_to_remove):
 	for item in items:
 		weight_sum += item["weight"]
 
+
 func pick_item(exclude: Array = []):
 	var adjusted_items: Array[Dictionary] = items
 	var adjusted_weight_sum = weight_sum
 	if exclude.size() > 0:
 		adjusted_items = []
+		adjusted_weight_sum = 0
 		for item in items:
 			if item["item"] in exclude:
 				continue
