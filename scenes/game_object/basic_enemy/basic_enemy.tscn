@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dnmf8y0rrxybg" path="res://scenes/component/vial_drop_component.tscn" id="3_pcrk2"]
 [ext_resource type="PackedScene" uid="uid://1bsms4hc8aeu" path="res://scenes/component/death_component.tscn" id="4_bq7hi"]
 [ext_resource type="PackedScene" uid="uid://dyj6wdq0kn713" path="res://scenes/component/hurtbox_component.tscn" id="4_elloc"]
+[ext_resource type="PackedScene" uid="uid://hblvsbvkp55b" path="res://scenes/component/velocity_component.tscn" id="4_jkye5"]
 
 [sub_resource type="Animation" id="Animation_elloc"]
 length = 0.001
@@ -13,7 +14,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Visuals/Sprite2D:position")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
@@ -25,7 +26,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Visuals/Sprite2D:rotation")
-tracks/1/interp = 1
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
@@ -88,7 +89,10 @@ autoplay = &"walk"
 [node name="HealthComponent" parent="." unique_id=1801799382 instance=ExtResource("2_isd1k")]
 
 [node name="VialDropComponent" parent="." unique_id=1342994495 node_paths=PackedStringArray("health_component") instance=ExtResource("3_pcrk2")]
+drop_percent = 0.35
 health_component = NodePath("../HealthComponent")
+
+[node name="VelocityComponent" parent="." unique_id=904987784 instance=ExtResource("4_jkye5")]
 
 [node name="DeathComponent" parent="." unique_id=502505261 node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("4_bq7hi")]
 health_component = NodePath("../HealthComponent")
