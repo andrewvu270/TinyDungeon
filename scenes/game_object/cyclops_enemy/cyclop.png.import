@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsucfhyfhm2q6"
-path="res://.godot/imported/tile_0109.png-f42b537770833190bc591335a099d48a.ctex"
+path="res://.godot/imported/cyclop.png-fb021fd7ee29a5ad0922f38c63428201.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/game_object/basic_enemy/tile_0109.png"
-dest_files=["res://.godot/imported/tile_0109.png-f42b537770833190bc591335a099d48a.ctex"]
+source_file="res://scenes/game_object/cyclops_enemy/cyclop.png"
+dest_files=["res://.godot/imported/cyclop.png-fb021fd7ee29a5ad0922f38c63428201.ctex"]
 
 [params]
 
