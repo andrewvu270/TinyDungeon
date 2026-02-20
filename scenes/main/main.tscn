@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://dmyeg6ldx2orv" path="res://scenes/ui/vignette.tscn" id="3_tw5xs"]
 [ext_resource type="PackedScene" uid="uid://lnbdf4stuwxn" path="res://scenes/manager/experience_manager.tscn" id="4_8br8e"]
 [ext_resource type="PackedScene" uid="uid://bt5jv4ycv6g0c" path="res://scenes/manager/upgrade_manager.tscn" id="6_bbysb"]
-[ext_resource type="PackedScene" uid="uid://4b1e7e1erq1o" path="res://scenes/game_object/cyclops_enemy/cyclops_enemy.tscn" id="14_7smn1"]
 
 [node name="Main" type="Node" unique_id=443623638]
 script = ExtResource("1_aeqkc")
@@ -52,6 +51,3 @@ position = Vector2(408, 337)
 arena_time_manager = NodePath("../../ArenaTimeManager")
 
 [node name="Foreground" type="Node2D" parent="." unique_id=217096553 groups=["foreground_layer"]]
-
-[node name="CyclopsEnemy" parent="." unique_id=507518203 instance=ExtResource("14_7smn1")]
-position = Vector2(236, 149)
